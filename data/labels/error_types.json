@@ -1,0 +1,11 @@
+{
+  "syntax_error": 0,
+  "logical_error": 1,
+  "type_error": 2,
+  "off_by_one": 3,
+  "infinite_loop": 4,
+  "null_reference": 5,
+  "division_by_zero": 6,
+  "bad_practice": 7,
+  "structural_issue": 8
+}
