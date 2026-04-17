@@ -67,7 +67,7 @@ from src.inference.predict import (
 from src.reasoning_engine.error_classifier import ErrorClassifier
 from src.reasoning_engine.feedback_scorer import FeedbackScorer
 from src.utils.config_loader import load_config
-from src.utils.logger import setup_logger
+from src.utils.logger import get_logger
 
 logger = logging.getLogger(__name__)
 
