@@ -56,7 +56,6 @@ import torch
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-
 from src.models.model_factory import ModelBundle, ModelFactory
 from src.inference.predict import (
     DetectionResult,
@@ -227,7 +226,6 @@ class PolyMentorPipeline:
                 "models_saved/best_mentor_model.pt"
             )
         """
-        setup_logger()
         logger.info("Loading PolyMentor from checkpoint: %s", checkpoint_path)
         bundle = ModelFactory.from_checkpoint(
             checkpoint_path=checkpoint_path,
