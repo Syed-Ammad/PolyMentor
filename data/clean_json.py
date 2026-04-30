@@ -1,3 +1,4 @@
+
 import json
 from pathlib import Path
 
@@ -5,7 +6,6 @@ input_dir = Path("data/raw_samples")
 output_dir = Path("data/processed")
 output_dir.mkdir(exist_ok=True)
 
-# Valid values load karo labels se
 with open("data/labels/difficulty_level.json") as f:
     valid_difficulty = json.load(f)
 
@@ -16,7 +16,6 @@ for file in input_dir.glob("*.json"):
     with open(file, encoding="utf-8") as f:
         raw = json.load(f)
 
-    # Validate karo
     if raw.get("difficulty_level") not in valid_difficulty:
         print(f"SKIP {file.name}: invalid difficulty_level")
         continue
@@ -25,7 +24,6 @@ for file in input_dir.glob("*.json"):
         print(f"SKIP {file.name}: invalid error_type")
         continue
 
-    # Clean karo
     cleaned = {
         "id": raw.get("id", ""),
         "language": raw.get("language", "unknown").lower().strip(),
@@ -42,3 +40,4 @@ for file in input_dir.glob("*.json"):
     print(f"Cleaned: {file.name}")
 
 print("All done!")
+
