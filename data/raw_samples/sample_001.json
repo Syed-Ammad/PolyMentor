@@ -1,0 +1,8 @@
+{
+  "id": "sample_001",
+  "language": "python",
+  "difficulty_level": "beginner",
+  "error_type": "syntax_error",
+  "code": "for i in range(10)\n    print(i)",
+  "error_message": "SyntaxError: expected ':' after for statement"
+}
